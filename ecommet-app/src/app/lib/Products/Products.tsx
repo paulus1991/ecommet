@@ -1,3 +1,5 @@
+import { Box } from "@mui/material";
+
 export const Products = () => {
-  return <div>Products Page</div>;
+  return <Box sx={{ textAlign: "center" }}>Products</Box>;
 };

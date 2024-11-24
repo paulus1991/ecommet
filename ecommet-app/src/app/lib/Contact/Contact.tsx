@@ -1,3 +1,5 @@
+import { Box, styled } from "@mui/material";
+
 export const Contact = () => {
-  return <div>Contact Page</div>;
+  return <Box sx={{ textAlign: "center" }}>Contact Page</Box>;
 };

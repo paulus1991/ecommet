@@ -1,58 +1,34 @@
 import { createTheme } from "@mui/material";
+import Poppins from "../../fonts/Poppins-Regular.ttf";
 
-const theme = createTheme({
-  components: {
-    MuiListItemText: {
-      styleOverrides: {
-        root: {
-          "& .MuiTypography-root": {
-            fontSize: "2rem",
-          },
-        },
-      },
+export const theme = createTheme({
+  palette: {
+    common: {
+      white: "#ffffff",
+      black: "#000000",
     },
-    MuiList: {
-      styleOverrides: {
-        root: {
-          "& .MuiMenuItem-root": {
-            fontSize: "1.125rem",
-          },
-        },
-      },
+    primary: {
+      main: "#37517e",
+      dark: "##023b6d",
     },
   },
   spacing: "8px",
   typography: {
-    h2: {
-      fontSize: "4rem",
-      fontFamily: "var(--font-lavigne-display)",
-      fontWeight: "300",
-      fontStyle: "normal",
-    },
-    h3: {
-      fontSize: "2.5rem",
-      fontFamily: "var(--font-lavigne-display)",
-      fontWeight: "300",
-      fontStyle: "normal",
-    },
+    fontFamily: "Poppins",
     h4: {
-      fontSize: "2rem",
-      fontFamily: "var(--font-lavigne-display)",
-      fontWeight: "300",
-      fontStyle: "normal",
+      fontFamily: "Poppins",
     },
-    h6: {
-      fontSize: "1.125rem",
-      fontFamily: "var(--font-lavigne-display)",
-      fontWeight: "400",
-      fontStyle: "normal",
-    },
-    body1: {
-      fontSize: "1rem",
-      fontFamily: "var(--font-lavigne-text)",
-      fontWeight: "400",
-      fontStyle: "normal",
-      lineHeight: "1.2",
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: `
+      @font-face{
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight:400;
+      src: local('Poppins-Regular') url(${Poppins}) format('truetype');
+      }
+      `,
     },
   },
 });

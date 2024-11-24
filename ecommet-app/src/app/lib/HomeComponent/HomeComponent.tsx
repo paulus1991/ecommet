@@ -1,3 +1,5 @@
+import { Box } from "@mui/material";
+
 export const HomeComponent = () => {
-  return <div>Welcome to Ecommet</div>;
+  return <Box>Welcome to Ecommet</Box>;
 };
